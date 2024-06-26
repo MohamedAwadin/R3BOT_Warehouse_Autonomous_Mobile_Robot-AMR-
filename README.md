@@ -4,6 +4,19 @@
 <p align='center'>
 <img width="95%" src="/img/1.png"/>
 </p>
+
+![Simulation ]
+<p align='center'>
+<img width="65%" src="/img/warehouse.gif"/>
+</p>
+
+![GUI]
+<p align='center'>
+<img width="65%" src="/img/gui_simulation.gif"/>
+</p>
+
+
+
 R3BOT is an advanced autonomous mobile robot designed for warehouse automation. This project leverages the Robot Operating System (ROS) to optimize material handling, enhance workplace safety, and increase operational efficiency.
 
 ## Table of Contents
