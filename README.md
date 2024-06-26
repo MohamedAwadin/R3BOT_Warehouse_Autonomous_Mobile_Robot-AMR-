@@ -1,6 +1,9 @@
 # R3BOT Warehouse Autonomous Mobile Robot (AMR)
 
-![Project Logo]("/img/1.png")
+![Project Logo]
+<p align='center'>
+<img width="95%" src="/img/1.png"/>
+</p>
 R3BOT is an advanced autonomous mobile robot designed for warehouse automation. This project leverages the Robot Operating System (ROS) to optimize material handling, enhance workplace safety, and increase operational efficiency.
 
 ## Table of Contents
