@@ -1,76 +1,100 @@
-# ROBOTICS EVALUATION TOOLKITS
-A simulation of basic robot localization (SLAM) and navigation in warehouse environment, with GUI
+# R3BOT Warehouse Autonomous Mobile Robot (AMR)
 
-**Author:** Mohamed Awadin, Mansoura University, Egypt.
+![Project Logo]("/img/1.png")
+R3BOT is an advanced autonomous mobile robot designed for warehouse automation. This project leverages the Robot Operating System (ROS) to optimize material handling, enhance workplace safety, and increase operational efficiency.
 
-
-## 1. Evaluation
-### 1.1. Simulation Description
-This package provides a simulation environment of warehouse. A robot is simulated at the center of the environment, with 2D laser scanner provided. 
-<p align='center'>
-<img width="65%" src="/img/warehouse.gif"/>
-</p>
-
-### 1.2. robot tutorial
-The localization and navigation unit is also provided for evaluation. This inlcudes basic 2D slam and robot navigation algorithm.
-<p align='center'>
-<img width="95%" src="/img/warehouse_simulation.gif"/>
-</p>
-
-### 1.3. 3D mapping
-The robot model is equipped with 3D Lidar as an alternative and simulation of 3D mapping is available 
-<p align='center'>
-<img width="95%" src="/img/3d_mapping.gif"/>
-</p>
-
-### 1.4. GUI Usage
-
-<p align='center'>
-<img width="95%" src="/img/gui.mp4"/>
-</p>
-
-## 2. Prerequisites
-### 2.1 **Ubuntu** and **ROS**
-Ubuntu 64-bit 20.04.
-
-ROS Noetic. [ROS Installation](http://wiki.ros.org/ROS/Installation)
-
-### 2.2. **ROS Package**
-```
-sudo apt-get install ros-noetic-hector-trajectory-server ros-noetic-slam-gmapping ros-noetic-navigation
-```
-
-## 3. Build 
-### 3.1 Clone repository:
-```
-    cd ~/catkin_ws/src
-    git clone https://github.com/MohamedAwadin/R3BOT_warehouse_robot.git
-    cd ..
-    catkin_make
-    source ~/catkin_ws/devel/setup.bash
-```
-
-### 3.2 Launch ROS
-```
-    roslaunch warehouse_simulation warehouse_simulation.launch
-```
-Note that it takes a few minutes to load model upon first launch
-
-### 3.3 Robot Control
-You can use keyboard (arrow keys) to manually control the robot (select cmd window first)
-
-### 3.4 Autonomous Navigation
-You may set target points in RVIZ and the robot will navigate to the location in gazebo.
-1. click 2d nav goal button on rviz
-2. click any points you want on the map
-
-### 3.5 Launch GUI
-```
-    roslaunch warehouse_simulation gui_warehouse_nev.py
-```
-Note that it takes a few minutes to load model upon first launch
-
-## 4.Acknowledgements
-Thanks for the great work from [GEAR](https://bitbucket.org/osrf/ariac/src/master/).
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Architecture](#architecture)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 
+## Installation
+
+### Prerequisites
+- ROS Noetic
+- Gazebo
+- Python 3.8
+- Tkinter
+- PIL (Pillow)
+
+### Step-by-Step Installation
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/MohamedAwadin/R3BOT_Warehouse_Autonomous_Mobile_Robot-AMR-
+   cd R3BOT_Warehouse_Autonomous_Mobile_Robot-AMR-
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   sudo apt-get update
+   sudo apt-get install ros-noetic-desktop-full
+   sudo apt-get install python3-pip
+   pip3 install rospkg catkin_pkg
+   sudo apt-get install ros-noetic-gazebo-ros
+   pip3 install pillow
+   sudo apt-get install python3-tk
+   ```
+
+3. **Build the workspace:**
+   ```sh
+   cd ~/catkin_ws/
+   catkin_make
+   source devel/setup.bash
+   ```
+
+## Usage
+
+### Running the Simulation
+1. **Launch the Gazebo warehouse simulation:**
+   ```sh
+   roslaunch r3bot_simulation warehouse.launch
+   ```
+
+2. **Run the GUI for navigation:**
+   ```sh
+   roslaunch warehouse_simulation gui_warehouse_nev.py
+   ```
+
+### Adding Delivery Points
+- Open the GUI.
+- Enter the coordinates (X, Y) in the respective fields.
+- Click on the "Add Point" button.
+
+### Removing Delivery Points
+- Open the GUI.
+- Enter the index of the delivery point to be removed.
+- Click on the "Remove Point" button.
+
+## Features
+- **Simulation Development:** Comprehensive warehouse simulation environment in Gazebo.
+- **Autonomous Navigation:** ROS-based navigation algorithms for precise movement.
+- **User Interface:** Intuitive GUI for managing robot tasks and monitoring status.
+- **Real-time Data Collection:** Collects and analyzes data to optimize performance.
+- **Enhanced Safety:** Reduces manual handling, enhancing workplace safety.
+
+## Architecture
+### Overview
+- **Simulation:** Gazebo environment for testing.
+- **ROS:** Core framework for robot operations.
+- **GUI:** Developed using Tkinter for user interaction.
+- **Navigation:** SLAM algorithms for real-time mapping and navigation.
+
+### Components
+- **Gazebo:** For warehouse simulation.
+- **ROS Nodes:** For robot control and navigation.
+- **Tkinter GUI:** For user interaction.
+
+## Contact
+**Mohamed Awadin**  
+Email:    mohamedawadin01@gmail.com
+GitHub:   [MohamedAwadin](https://github.com/MohamedAwadin)
+LinkedIn: [MohamedAwadin](https://www.linkedin.com/in/mohamedawadin/)
+
+---
+
+To further enhance the documentation, consider adding images or GIFs to demonstrate the GUI and robot operations, detailed descriptions of each ROS node, and example scenarios. Additionally, create separate files for contributing guidelines and detailed architecture documentation if necessary.
