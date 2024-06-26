@@ -110,7 +110,3 @@ R3BOT is an advanced autonomous mobile robot designed for warehouse automation. 
 Email:    mohamedawadin01@gmail.com
 GitHub:   [MohamedAwadin](https://github.com/MohamedAwadin)
 LinkedIn: [MohamedAwadin](https://www.linkedin.com/in/mohamedawadin/)
-
----
-
-To further enhance the documentation, consider adding images or GIFs to demonstrate the GUI and robot operations, detailed descriptions of each ROS node, and example scenarios. Additionally, create separate files for contributing guidelines and detailed architecture documentation if necessary.
